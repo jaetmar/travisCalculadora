@@ -14,7 +14,7 @@ before_script:
 
 
 script:
-  - "python figurastest.py"
+  - "python CalculadoraTest.py"
   - lettuce
-  - coverage run --branch figurastest.py
+  - coverage run --branch CalculadoraTest.py
   - coverage report
