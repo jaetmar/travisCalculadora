@@ -70,10 +70,6 @@ class CalculadoraTest(unittest.TestCase):
         self.calc.dividir(3, 3)
         self.assertEqual(self.calc.obtener_resultado(), 1)
 
-    def test_divide_1_negativo_entre_2_igual_0_5_negativo(self):
-        self.calc.dividir(-1, 2)
-        self.assertEqual(self.calc.obtener_resultado(), -0.5)
-
     def test_divide_L_entre_2_igual_DatosIncorrectos(self):
         self.calc.dividir('L', 2)
         self.assertEqual(self.calc.obtener_resultado(), 'Datos Incorrectos')
@@ -115,24 +111,7 @@ class CalculadoraTest(unittest.TestCase):
         self.calc.potencia('L', 2)
         self.assertEqual(self.calc.obtener_resultado(), 'Datos Incorrectos')
 
-    # INICIA TEST RAÍZ
-    def test_raiz_9_a_2_igual_3(self):
-        self.calc.raiz(9, 2)
-        self.assertEqual(self.calc.obtener_resultado(), 3)
-
-    def test_raiz_27_a_3_igual_3(self):
-        self.calc.raiz(27, 3)
-        self.assertEqual(self.calc.obtener_resultado(), 3)
-
-    def test_raiz_1_negativo_a_2_igual_1(self):
-        self.calc.raiz(-1, 2)
-        self.assertEqual(self.calc.obtener_resultado(),
-                         6.123233995736766e-17 + 1j)
-
-    def test_raiz_2_a_0_igual_0_5(self):
-        self.calc.raiz(2, 0)
-        self.assertEqual(self.calc.obtener_resultado(), 'Datos Incorrectos')
-
+    # INICIA TEST RAIZ
     def test_raiz_L_a_2_igual_DatosIncorrectos(self):
         self.calc.raiz('L', 2)
         self.assertEqual(self.calc.obtener_resultado(), 'Datos Incorrectos')
